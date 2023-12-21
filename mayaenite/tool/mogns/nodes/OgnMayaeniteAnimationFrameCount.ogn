@@ -1,0 +1,57 @@
+{
+    "MayaeniteAnimationFrameCount": {
+        "version": 1,
+        "description": "Returns The Frame Count Of The Input Prim",
+        "language": "Python",
+        "categories": {
+            "Mayaenite": "Nodes implementing lights for rendering"
+        },
+        "metadata": {
+            "uiName": "Mayaenite Animation Frame Count"
+        },
+        "inputs": {
+            "prim": {
+                "type": "target",
+                "description": "The Prim To Get The Frame Count For",
+                "default": 0,
+                "optional": false,
+                "metadata": {
+                    "uiName": "Prim"
+                }
+            },
+            "frameRate": {
+                "type": "timecode",
+                "description": "The Frame Rate The Animation Was Generated At",
+                "metadata": {
+                    "uiName": "Frame Rate"
+                },
+                "default": 24.0
+            },
+            "useSceneFrameRate": {
+                "type": "bool",
+                "description": "When checked this node will use the frame rate of the root layer",
+                "default": false,
+                "metadata": {
+                    "uiName": "Use Scene Frame Rate"
+                }
+            }
+        },
+        "outputs": {
+            "frameCount": {
+                "type": "int",
+                "description": "The Amount Of Frames The Input Prim Has",
+                "metadata": {
+                    "uiName": "Frame Count"
+                }
+            },
+            "outPrim": {
+                "type": "target",
+                "description": "outputs the input path for exe flow into down streem inputs",
+                "metadata": {
+                    "uiName": "Prim"
+                },
+                "default": null
+            }
+        }
+    }
+}
